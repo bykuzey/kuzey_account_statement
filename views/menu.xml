@@ -1,0 +1,6 @@
+<odoo>
+    <data>
+        <menuitem id="kuzey_reports_root" name="Kuzey Raporlar" web_icon="/kuzey_account_statement/static/description/icon.png" />
+        <menuitem id="menu_cari_ekstre" name="Cari Ekstre" parent="kuzey_reports_root" action="action_kuzey_statement_wizard" />
+    </data>
+</odoo>

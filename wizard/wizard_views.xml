@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+    <record id="view_kuzey_statement_wizard" model="ir.ui.view">
+      <field name="name">kuzey.statement.wizard.form</field>
+      <field name="model">kuzey.statement.wizard</field>
+      <field name="arch" type="xml">
+        <form string="Cari Ekstre Raporu">
+          <group>
+            <field name="partner_id"/>
+            <field name="date_from"/>
+            <field name="date_to"/>
+            <field name="is_detailed"/>
+          </group>
+          <footer>
+            <button string="PDF Oluştur" type="object" name="generate_report" class="btn-primary"/>
+            <button string="İptal" class="btn-secondary" special="cancel"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+    <record id="action_kuzey_statement_wizard" model="ir.actions.act_window">
+      <field name="name">Cari Ekstre</field>
+      <field name="res_model">kuzey.statement.wizard</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+    </record>
+  </data>
+</odoo>

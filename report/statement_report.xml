@@ -1,0 +1,30 @@
+<odoo>
+  <data>
+    <!-- PDF Action -->
+    <report 
+        id="action_statement_report_pdf"
+        string="Cari Ekstre Raporu"
+        model="kuzey.statement.wizard"
+        report_type="qweb-pdf"
+        name="kuzey_account_statement.report_statement"
+        file="kuzey_account_statement.report_statement"
+        print_report_name="'Cari Ekstre - %s' % (object.partner_id.name)"
+    />
+
+    <!-- QWeb Template -->
+    <template id="report_statement">
+      <t t-call="web.external_layout">
+        <t t-set="o" t-value="object"/>
+
+        <div class="page">
+          <h2 style="text-align:center;">Cari Ekstre</h2>
+          <p><strong>Cari:</strong> <t t-esc="o.partner_id.name"/></p>
+          <p><strong>Tarih Aralığı:</strong> <t t-esc="o.date_from"/> - <t t-esc="o.date_to"/></p>
+          <p><strong>Detaylı:</strong> <t t-esc="o.is_detailed and 'Evet' or 'Hayır'"/></p>
+
+          <p>Rapor verileri burada listelenecek.</p>
+        </div>
+      </t>
+    </template>
+  </data>
+</odoo>
