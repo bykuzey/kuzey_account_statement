@@ -1,9 +1,0 @@
-<odoo>
-    <record id="action_statement_report_pdf" model="ir.actions.report">
-        <field name="name">Cari Hesap Ekstresi PDF</field>
-        <field name="model">account.statement</field> <!-- Model adını kendi modelinize göre güncelleyin -->
-        <field name="report_type">qweb-pdf</field>
-        <field name="report_name">kuzey_account_statement.statement_report_pdf</field> <!-- qweb template adı -->
-        <field name="paperformat_id" ref="account.paperformat_euro"/>
-    </record>
-</odoo>
