@@ -12,7 +12,7 @@
     />
 
     <!-- QWeb Template -->
-    <template id="report_statement">
+    <template id="kuzey_account_statement.report_statement">
       <t t-call="web.external_layout">
         <t t-set="o" t-value="object"/>
 

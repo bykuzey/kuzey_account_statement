@@ -7,12 +7,9 @@
     'depends': ['account'],
     'data': [
         'security/ir.model.access.csv',
-        'models/model_access.xml',
-        'wizard/wizard_views.xml',
+                'wizard/wizard_views.xml',
         'views/menu.xml',
         'report/statement_report.xml'
-        'report/account_statement_report.xml'
-        'report/statement_report_action.xml',
     ],
     'images': ['static/description/icon.png'],
     'installable': True,
