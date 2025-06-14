@@ -7,7 +7,7 @@
     'depends': ['account'],
     'data': [
         'security/ir.model.access.csv',
-                'wizard/wizard_views.xml',
+        'wizard/wizard_views.xml',
         'views/menu.xml',
         'report/statement_report.xml'
     ],
