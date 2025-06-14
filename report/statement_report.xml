@@ -1,18 +1,17 @@
 <odoo>
   <data>
     <!-- PDF Action -->
-    <report 
-        id="action_statement_report_pdf"
-        string="Cari Ekstre Raporu"
-        model="kuzey.statement.wizard"
-        report_type="qweb-pdf"
-        name="kuzey_account_statement.report_statement"
-        file="kuzey_account_statement.report_statement"
-        print_report_name="'Cari Ekstre - %s' % (object.partner_id.name)"
-    />
+    <record id="action_statement_report_pdf" model="ir.actions.report">
+      <field name="name">Cari Ekstre Raporu</field>
+      <field name="model">kuzey.statement.wizard</field>
+      <field name="report_type">qweb-pdf</field>
+      <field name="report_name">kuzey_account_statement.report_statement</field>
+      <field name="file">kuzey_account_statement.report_statement</field>
+      <field name="print_report_name">'Cari Ekstre - %s' % (object.partner_id.name)</field>
+    </record>
 
     <!-- QWeb Template -->
-    <template id="kuzey_account_statement.report_statement">
+    <template id="report_statement">
       <t t-call="web.external_layout">
         <t t-set="o" t-value="object"/>
 
